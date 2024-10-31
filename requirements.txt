@@ -1,0 +1,13 @@
+--prefer-binary
+
+PySimpleGUI
+PyMuPDF
+
+ruamel.yaml
+
+#transformers
+protobuf
+#torch
+
+#black
+#isort
