@@ -1,6 +1,6 @@
 --prefer-binary
 
-PySimpleGUI
+FreeSimpleGUI
 PyMuPDF
 
 ruamel.yaml

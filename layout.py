@@ -1,6 +1,6 @@
 import os
 
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 
 import functions
 

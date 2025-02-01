@@ -11,7 +11,7 @@ yaml.default_flow_style = False
 def get_models() -> list[str]:
     return sorted(
         [
-            i
+            i.replace("_", "")
             for i in os.listdir(path="models")
             if not i.startswith("__") and os.path.isdir(os.path.join("models", i))
         ]

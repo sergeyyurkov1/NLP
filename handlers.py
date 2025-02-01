@@ -2,7 +2,7 @@ import importlib
 import os
 
 import fitz
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 
 import functions
 import layout
@@ -15,7 +15,7 @@ pp = Preprocessor()
 
 def _summarize(model: str, text: str) -> str:
     try:
-        model = importlib.import_module(f"models.{model}.main")
+        model = importlib.import_module(f"models.{model}_.main")
 
         result = getattr(model, "default")(text)
 
@@ -36,6 +36,7 @@ def summarize_all(event, values, window):
     paths = [i for i in window["-TREE-"].TreeData.tree_dict if i != ""]
 
     window["-PROG-"].update(current_count=0, max=len(paths))
+    window["-SB-"].update("Working")
 
     for e, path in enumerate(paths):
         event, values = window.read(timeout=10)
